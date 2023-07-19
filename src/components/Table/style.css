@@ -1,0 +1,80 @@
+table{
+    border-collapse: collapse;
+    width: 100%;
+    margin: 0;
+    max-width: 100%;
+    white-space:nowrap;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 15px rbga(0, 0, 0, 0.22);
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+    margin-bottom: 2rem;
+}
+table thead th {
+    font-weight: 600;
+    color: #FFF;
+    background-color: #2c3e50;
+    border-color: #2c3e50;
+    padding: 10px 15px;
+    text-align: center;
+    vertical-align: middle;
+}
+table tbody td{
+    padding: 10px 15px ;
+    text-align: center;
+    vertical-align: middle;
+    border-top: 1px solid #f0f0f0;
+    max-width: 100px ;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+table tbody tr:nth-child(even){
+    background-color: #F5F5F5;
+}
+table tbody tr:hover {
+    background-color: #f0f0f0;
+}
+table tbody tr.active-row{
+    font-weight: 600;
+    color: #009879;
+}
+ul{
+    text-align: left;
+    padding-left: 1rem;
+}
+table tbody tr td{
+    padding: 2rem 1rem;
+}
+.actions_container{
+    padding: 0 1rem;
+}
+.actions_container button{
+    padding: 1rem;
+    margin: 0 .5rem;
+    width: 90px;
+    border-radius: 10px;
+    border: none;
+    color: white;
+    font-weight: bold;
+}
+button[name="add-btn"]{
+    padding: 1rem;
+    margin: 1rem  0;
+    width: 120px;
+    border-radius: 10px;
+    border: none;
+    color: white;
+    font-weight: bold;
+    background-color: rgb(2, 162, 255);
+}
+button[name="delete-btn"]{
+    background-color: rgb(235, 76, 76);
+}
+button[name="edit-btn"]{
+    background-color: rgb(14, 89, 239);
+}   
+button[name="submit-btn"]{
+    background-color: rgb(26, 185, 58);
+}   
