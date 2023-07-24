@@ -7,13 +7,16 @@ import { PATHS } from '../../router/paths'
 const AddStorePage = () => {
     const navigate = useNavigate()
     const submitHandler = async (body) => {
-        console.log('Submitted')
-        try {
-            await axios.post('https://some-data.onrender.com/stores',body)
-            navigate(PATHS.STORES.ROOTE)
-        } catch (error) {
-            console.log(error.message);
-            console.log("FAILD TO ADD");
+        if (body.cities.length === 0 || body.name.length === 0) {
+            alert("YOU HAVE TO FILL THE INPUTS")
+        } else {
+            try {
+                console.log("After Guard");
+                await axios.post('https://some-data.onrender.com/stores', body)
+                navigate(PATHS.STORES.ROOTE)
+            } catch (error) {
+                console.log(error.message);
+            }
         }
     }
     return (
@@ -24,6 +27,6 @@ const AddStorePage = () => {
             />
         </div>
     )
-}
+}   
 
 export default AddStorePage
