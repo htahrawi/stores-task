@@ -46,7 +46,8 @@ const StoreForm = ({ handleSubmitProp = () => { }, storeFromProps }) => {
                                     rows={10}
                                     cols={30}
                                     value={store[input.id]}
-                                    placeholder='Enter one City in every line'
+                                    placeholder='Enter cities here'
+                                    required
                                 ></textarea>
                                 :
                                 <input
@@ -55,6 +56,8 @@ const StoreForm = ({ handleSubmitProp = () => { }, storeFromProps }) => {
                                     name={input.name}
                                     id={input.id}
                                     value={store[input.id]}
+                                    placeholder={`Enter the ${input.name} here`}
+                                    required
                                 />
                         }
                     </div>
